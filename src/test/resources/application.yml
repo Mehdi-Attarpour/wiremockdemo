@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: local
+
+info:
+  baseUrl: http://localhost:${wiremock.server.port}

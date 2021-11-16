@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: local
+
+info:
+  baseUrl: https://somewhere.com

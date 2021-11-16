@@ -6,9 +6,14 @@ import reactor.core.publisher.Mono;
 
 public class InfoRepository {
 
+    private final WebClient webClient;
+
+    public InfoRepository(final WebClient webClient) {
+        this.webClient = webClient;
+    }
+
     public Mono<Boolean> isInfoTrue() {
-        return WebClient
-                .create("http://localhost:8989")
+        return webClient
                 .get()
                 .uri("/info")
                 .header("Country", "Sweden")
